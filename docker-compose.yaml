@@ -1,0 +1,14 @@
+services:
+  seanime:
+    build: .
+    container_name: seanime
+    ports:
+      - 43211:43211
+    environment:
+      - SEANIME_SERVER_HOST=0.0.0.0
+    volumes:
+      - <PATH_TO_YOUR_LIBRARY_DIRECTORY>:/library
+      - seanime_config:/root/.config/Seanime
+
+volumes:
+  seanime_config:

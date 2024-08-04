@@ -135,6 +135,22 @@ Development and testing might require additional configuration.
 
 [Read more here](https://github.com/5rahim/seanime/blob/main/DEVELOPMENT_AND_BUILD.md)
 
+## Docker setup
+
+You can start and use Seanime through a docker container.
+You have to configure two things:
+
+- Path to the library that stores your downloaded anime and mangas 
+- The environment variable that dictates on which IP address seanime should listen on.
+
+Once done, you can use the command `docker compose up -d --build` to start the container. By default the app listen on 0.0.0.0 so that it can be reached using your local machine IP address. For instance if your IP is 192.168.1.111 you can reach the app at `http://192.168.1.111:43211`.
+
+The docker-compose file comes with 
+
+- Seanime
+- Qbitorrent to download your files (you can remove it if you wish to use your own)
+- MPV instance (if you do not wish to use the embedded streaming feature)
+
 # Screenshots
 
 ### Scanning
